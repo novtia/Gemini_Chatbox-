@@ -1,0 +1,33 @@
+/* 基础样式已经在index.html中通过Tailwind和内联样式定义 */
+/* 这个文件可以用于添加额外的自定义样式 */
+
+/* 确保应用占满整个视口 */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(75, 85, 99, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(75, 85, 99, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.7);
+}
+
+/* 文本区域自动调整高度的过渡效果 */
+textarea {
+  transition: height 0.2s ease;
+}

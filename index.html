@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Chat Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css" integrity="sha512-MmL2FuLmm/UH05Ah4JiJwA+G7OCceZDpzGHWqsju4Espzq+9nwQJdQVMNZPd1FNK2H3qDYXdET7HNG7Qm93FEg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/github-dark.min.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    html, body, #root {
+      height: 100%;
+    }
+    /* 默认主题和字体大小 */
+    :root {
+      --bg-primary: #1f2937;
+      --bg-secondary: #111827;
+      --text-primary: #f9fafb;
+      --text-secondary: #d1d5db;
+      --accent-color: #0ea5e9;
+      --border-color: #374151;
+      --font-size-base: 1rem;
+      --font-size-sm: 0.875rem;
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+    }
+    
+    /* Ensure markdown body inherits theme colors and has some padding */
+    .markdown-body {
+      background-color: transparent !important; /* Override github-markdown-css default bg */
+      color: inherit !important; /* Inherit text color from parent */
+      font-size: 0.9rem; /* Adjust base font size if needed */
+      line-height: 1.6;
+    }
+    .markdown-body p,
+    .markdown-body ul,
+    .markdown-body ol,
+    .markdown-body blockquote,
+    .markdown-body pre,
+    .markdown-body table,
+    .markdown-body dl {
+      margin-top: 0;
+      margin-bottom: 12px; /* Slightly smaller margin for chat context */
+    }
+    .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+      margin-top: 18px; /* Smaller top margin */
+      margin-bottom: 10px; /* Smaller bottom margin */
+      font-weight: 600;
+      color: inherit; /* Ensure headings also inherit color */
+    }
+    .markdown-body code {
+      background-color: rgba(255, 255, 255, 0.1) !important; /* Darker code background */
+      color: #a6e22e !important; /* Light green for code text */
+      padding: 0.2em 0.4em;
+      margin: 0;
+      font-size: 85%;
+      border-radius: 3px;
+    }
+    .markdown-body pre {
+      background-color: rgba(0, 0, 0, 0.2) !important; /* Darker pre background */
+      padding: 12px !important;
+      border-radius: 6px !important;
+      overflow: auto;
+    }
+    .markdown-body pre code {
+      background-color: transparent !important; /* Code inside pre should not have its own bg */
+      color: inherit !important; /* Inherit color from pre */
+      padding: 0;
+    }
+    .markdown-body a {
+        color: #38bdf8 !important; /* Sky blue for links */
+    }
+    .markdown-body a:hover {
+        text-decoration: underline !important;
+    }
+    .markdown-body blockquote {
+        color: #9ca3af !important; /* Gray for blockquote text */
+        border-left-color: #4b5563 !important; /* Darker gray for border */
+    }
+    .markdown-body hr {
+        background-color: #4b5563 !important; /* Darker gray for hr */
+    }
+    .markdown-body table th, .markdown-body table td {
+        border-color: #4b5563 !important; /* Darker gray for table borders */
+    }
+     /* Remove Tailwind's preflight for .markdown-body elements to let github-markdown-css take over */
+    .markdown-body ol,
+    .markdown-body ul {
+      list-style: revert;
+      margin: revert;
+      padding: revert;
+    }
+
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "lucide-react": "https://esm.sh/lucide-react@0.416.0",
+    "uuid": "https://esm.sh/uuid@^11.0.0",
+    "marked": "https://esm.sh/marked@^13.0.2",
+    "dompurify": "https://esm.sh/dompurify@^3.1.6",
+    "highlight.js/": "https://esm.sh/highlight.js@^11.11.1/",
+    "highlight.js": "https://esm.sh/highlight.js@^11.11.1",
+    "tailwindcss/": "https://esm.sh/tailwindcss@^4.1.8/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
